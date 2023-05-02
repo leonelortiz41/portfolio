@@ -1,0 +1,150 @@
+body {
+    background-image: linear-gradient(to bottom,
+            #000000,
+            rgba(38, 70, 38, 0.5)),
+        url("../src/assets/bg-3.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    user-select: none;
+    color: #fff;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.skills:hover {
+    filter: drop-shadow(2px -2px 4px #e1ff00);
+}
+
+.card-blur{
+    background: rgba(0, 0, 0, 0.043);
+    backdrop-filter: blur(3.5px);
+
+}
+.body-header {
+    box-shadow: 1px 1px 11px #e1ff00;
+    z-index: 100;
+}
+
+.body-header .name {
+    font-size: 25px;
+}
+
+.body-header .btn {
+    color: #e1ff00;
+}
+.btn {
+    border: none;
+}
+.btn-blackgreen{
+    color: #e1ff00;
+    background: #111;
+}
+.btn-blackgreen:hover{
+    color: #000;
+    box-shadow: 2px 2px 5px #000;
+    /* background: #e1ff00; */
+}
+.body-header .btn:hover {
+    color: #fff;
+}
+.body-contact{
+    margin-top: 130px;
+}
+.animation-show{
+    animation-name: intro;
+    animation-duration: .6s;
+    animation-fill-mode: initial;
+    
+}
+label{
+    background: rgba(19, 22, 16, 0.212);
+}
+label p{
+    color: #e1ff00;
+}
+input[type="text"],textarea,input[type="email"]{
+    outline: none;
+    background: transparent;
+    border: none;
+}
+
+.perfil{
+    border-right: solid 2px #000;
+    border-bottom: solid 2px #e1ff00;
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-track {
+    background: #151515;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #d4ffcef3;
+    border-radius: 5px;
+}
+
+.body-home {
+    height: 100%;
+}
+.body-about{
+}
+
+
+.body-footer {
+    background: #060606;
+}
+
+@keyframes text-gradient {
+    0% {
+        background: linear-gradient(to right, #fff, #e1ff00);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+    }
+
+    20% {
+        background: linear-gradient(to top, #fff, #e1ff00);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+    }
+
+    60% {
+        background: linear-gradient(to left ,#fff, #e1ff00);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+    }
+
+    80% {
+        background: linear-gradient(to bottom ,#fff, #e1ff00);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+    }
+
+    100% {
+        background: linear-gradient(to right, #fff, #e1ff00);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+    }
+}
+.text-web {
+    animation-name: text-gradient;
+    animation-duration: 2.8s;
+    animation-iteration-count: initial;
+    animation-iteration-count: infinite;
+    animation-fill-mode: initial;
+}
+
+
+@keyframes intro{
+    0%{
+        opacity: 0%;
+    }
+    70%{
+        opacity: 90%;
+    }
+    
+}
