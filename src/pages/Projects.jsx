@@ -11,7 +11,7 @@ function Projects() {
                     <img src={storeip} className="card-img-top" />
                     <div className=" d-flex flex-column">
                         <h5 className="card-title m-auto text-center">Store Iphone (demo)</h5>
-                        <p className="card-text">Un texto de ejemplo rápido para colocal cerca del título de la tarjeta y componer la mayor parte del contenido de la tarjeta.</p>
+                        <p className="card-text">demo de un e-commerce. Para navegar mejor puede usar los siguientes usuarios demo: [user: pili, password: 1234], [user: leo, password: 1234].</p>
                         <a href="https://storeip.netlify.app" target='_blank' className="btn mx-auto btn-blackgreen">Website</a>
                     </div>
                 </div>
@@ -19,7 +19,7 @@ function Projects() {
                     <img src={barlpdemo} className="card-img-top" />
                     <div className=" d-flex flex-column">
                         <h5 className="card-title m-auto text-center">punto de venta (demo)</h5>
-                        <p className="card-text">Un texto de ejemplo rápido para colocal cerca del título de la tarjeta y componer la mayor parte del contenido de la tarjeta.</p>
+                        <p className="card-text">demo de un punto de venta que se esta utilizando en un bar, en esta demo no podran ser utilizadas algunas funciones.</p>
                         <a href="https://barlp-demo.netlify.app"  target='_blank'className="btn mx-auto btn-blackgreen">Website</a>
                     </div>
                 </div>
