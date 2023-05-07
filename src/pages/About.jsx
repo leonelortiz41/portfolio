@@ -14,8 +14,8 @@ import arg from '../assets/arg.svg'
 
 function About() {
     return (
-        <div className="container-fluid animation-show body-about d-flex flex-column flex-lg-row justify-content-evenly mx-auto " style={{ marginTop: "130px" }}>
-            <div className="col-lg-6 card-blur d-flex flex-column rounded justify-content-center p-3">
+        <div className="container-fluid body-about d-flex flex-column flex-lg-row justify-content-evenly mx-auto " style={{ marginTop: "130px" }}>
+            <div className="col-lg-6 card-blur d-flex flex-column rounded justify-content-center p-3 animation-show ">
                     <h3 className='text-center '>About me</h3>
                     <p className=''>
                     I'm Leonel, I'm 23 years old. I am a Full Stack web developer and designer, with a Front-End orientation. I consider myself a creative person. I study daily to perfect myself and expand my skills as a programmer. I love generating attractive experiences visually but also functionally. I would like to join a work team to contribute my knowledge and continue developing my skills. Greetings from Tucuman, Argentina.
@@ -23,7 +23,7 @@ function About() {
                     </p>
                     <a className="btn btn-blackgreen d-block ms-auto me-4" href={`https://www.dropbox.com/s/10ifpnj222j3xiy/cv-leonel-ortiz.pdf?dl=0`} target='_blank'>Donwload CV</a>
             </div>
-            <div className="col-lg-5 card-blur rounded text-center my-4 my-lg-0">
+            <div className="col-lg-5 card-blur rounded text-center my-4 my-lg-0 animation-show ">
                 <h1>My skills</h1>
                 <div className='row  justify-content-center pointer'>
                     <div className='col-3 skills d-flex flex-column text-center p-2 align-items-center'>

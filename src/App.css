@@ -2,7 +2,7 @@ body {
     background-image: linear-gradient(to bottom,
             #000000,
             rgba(38, 70, 38, 0.5)),
-        url("../src/assets/bg-3.jpg");
+        url("../src/assets/bg-4.svg");
     background-size: cover;
     background-attachment: fixed;
     user-select: none;
@@ -19,7 +19,7 @@ body {
 
 .card-blur{
     background: rgba(0, 0, 0, 0.043);
-    backdrop-filter: blur(3.5px);
+    backdrop-filter: blur(6px);
 
 }
 .body-header {
@@ -54,7 +54,8 @@ body {
 }
 .animation-show{
     animation-name: intro;
-    animation-duration: .6s;
+    animation-duration: 0.9s;
+    animation-delay: 0s;
     animation-fill-mode: initial;
     
 }
@@ -140,11 +141,12 @@ input[type="text"],textarea,input[type="email"]{
 
 
 @keyframes intro{
-    0%{
-        opacity: 0%;
+    10%{
+        opacity: 1%;
+        /* backdrop-filter: blur(4px); */
     }
-    70%{
-        opacity: 90%;
+    100%{
+        opacity: 100%;
+        /* backdrop-filter: blur(6px); */
     }
-    
 }
