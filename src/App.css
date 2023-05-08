@@ -141,8 +141,8 @@ input[type="text"],textarea,input[type="email"]{
 
 
 @keyframes intro{
-    10%{
-        opacity: 1%;
+    0%{
+        opacity: 0%;
         /* backdrop-filter: blur(4px); */
     }
     100%{
