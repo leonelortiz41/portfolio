@@ -46,7 +46,7 @@ function Projects() {
                             <h5 className="card-title m-auto text-center">DROMO GYM</h5>
                             <p className="card-text">Administrador de datos y rutinas de un gimnacio.</p>
                         </div>
-                        <a href="https://notes41.netlify.app/" target='_blank' className="btn mx-auto btn-blackgreen">Website</a>
+                        <a href="https://dromo.netlify.app/" target='_blank' className="btn mx-auto btn-blackgreen">Website</a>
                     </div>
                 </div>
             </div>
