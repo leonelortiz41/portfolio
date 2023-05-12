@@ -19,7 +19,7 @@ function About() {
                     <h3 className='text-center '>About me</h3>
                     <p className=''>
                     I'm Leonel, I'm 23 years old. I am a Full Stack web developer and designer, with a Front-End orientation. I consider myself a creative person. I study daily to perfect myself and expand my skills as a programmer. I love generating attractive experiences visually but also functionally. I would like to join a work team to contribute my knowledge and continue developing my skills. Greetings from Tucuman, Argentina.
-                    <img src={arg} className='ms-2' style={{height:"30px"}}/>
+                    <img src={arg} className='ms-2' style={{height:"25px"}}/>
                     </p>
                     <a className="btn btn-blackgreen d-block ms-auto me-4" href={`https://www.dropbox.com/s/10ifpnj222j3xiy/cv-leonel-ortiz.pdf?dl=0`} target='_blank'>Donwload CV</a>
             </div>
