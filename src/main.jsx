@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App'
+import './App.css'
 import Header from './components/Header'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Home from './pages/Home'
@@ -23,6 +23,5 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         {/* <Footer/> */}
       </BrowserRouter>
     </div>
-    <App />
   </React.StrictMode>,
 )
