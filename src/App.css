@@ -130,7 +130,7 @@ input[type="email"] {
         background: linear-gradient(to left, #fff, #e1ff00);
         -webkit-text-fill-color: transparent;
         -webkit-background-clip: text;
-        transform: matrix(1.11, 0, 0.6, 1.1, -15,3);
+        translate: -30px;
     }
 
     80% {
