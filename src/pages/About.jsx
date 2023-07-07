@@ -21,7 +21,7 @@ function About() {
                     I'm Leonel, I'm 23 years old. I am a Full Stack web developer and designer, with a Front-End orientation. I consider myself a creative person. I study daily to perfect myself and expand my skills as a programmer. I love generating attractive experiences visually but also functionally. I would like to join a work team to contribute my knowledge and continue developing my skills. Greetings from Tucuman, Argentina.
                     <img src={arg} className='ms-2' style={{height:"25px"}}/>
                     </p>
-                    <a className="btn btn-blackgreen d-block ms-auto me-4" href={`https://www.dropbox.com/s/udmu7dbrc1013oe/cv-leonel-ortiz.pdf?dl=0`} target='_blank'>Donwload CV</a>
+                    <a className="btn btn-blackgreen d-block ms-auto me-4" href={`https://www.dropbox.com/scl/fi/z7mu0cyy3ej0oblv2rbec/cv-OrtizCarlosLeonel.pdf?rlkey=zso9haz1vpaofvxj6sop1h4f1&dl=0`} target='_blank'>Donwload CV</a>
             </div>
             <div className="col-lg-5 card-blur rounded text-center my-4 my-lg-0 animation-show ">
                 <h1>My skills</h1>
