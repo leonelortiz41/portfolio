@@ -5,7 +5,10 @@ import react from '../assets/react.png'
 import redux from '../assets/redux.png'
 import bootstrap from '../assets/bootstrap.png'
 import tailwind from '../assets/tailwind.png'
+import materialui from '../assets/materialui.png'
 import node from '../assets/node.png'
+import php from '../assets/php.png'
+import laravel from '../assets/laravel.png'
 import typescript from '../assets/typescript.png'
 import git from '../assets/git.png'
 import arg from '../assets/arg.svg'
@@ -18,7 +21,7 @@ function About() {
             <div className="col-lg-6 card-blur d-flex flex-column rounded justify-content-center p-3 animation-show ">
                     <h3 className='text-center '>About me</h3>
                     <p className=''>
-                    I'm Leonel, I'm 23 years old. I am a Full Stack web developer and designer, with a Front-End orientation. I consider myself a creative person. I study daily to perfect myself and expand my skills as a programmer. I love generating attractive experiences visually but also functionally. I would like to join a work team to contribute my knowledge and continue developing my skills. Greetings from Tucuman, Argentina.
+                    Soy Leonel, un profesional con formación en desarrollo de software y estudiante de ingeniería en sistemas de información en UTN, tengo 23 años y vivo en Tucumán, Argentina. Del lado del frontend he trabajado como diseñador, maquetador y desarrollador, y del lado backend he trabajado principalmente creando API. Estoy para sumar mis conocimientos a un equipo de trabajo y siga desarrollando mis habilidades como profesional.
                     <img src={arg} className='ms-2' style={{height:"25px"}}/>
                     </p>
                     <a className="btn btn-blackgreen d-block ms-auto me-4" href={`https://www.dropbox.com/scl/fi/z7mu0cyy3ej0oblv2rbec/cv-OrtizCarlosLeonel.pdf?rlkey=zso9haz1vpaofvxj6sop1h4f1&dl=0`} target='_blank'>Donwload CV</a>
@@ -40,7 +43,10 @@ function About() {
                     </div>
                     <div className='col-3 skills d-flex flex-column text-center p-2 align-items-center'>
                         <img src={react} className='w-50' alt="" />
-                        <span className='mt-auto'>REACT</span>
+                        <span className='mt-auto'>REACT.JS</span>
+                    </div><div className='col-3 skills d-flex flex-column text-center p-2 align-items-center'>
+                        <img src={react} className='w-50' alt="" />
+                        <span className='mt-auto'>REACT NATIVE</span>
                     </div>
                     <div className='col-3 skills d-flex flex-column text-center p-2 align-items-center'>
                         <img src={redux} className='w-50' alt="" />
@@ -55,6 +61,10 @@ function About() {
                         <span className='mt-auto'>TAILWIND</span>
                     </div>
                     <div className='col-3 skills d-flex flex-column text-center p-2 align-items-center'>
+                        <img src={materialui} className='w-50' alt="" />
+                        <span className='mt-auto'>MATERIAL UI</span>
+                    </div>
+                    <div className='col-3 skills d-flex flex-column text-center p-2 align-items-center'>
                         <img src={typescript} className='w-50' alt="" />
                         <span className='mt-auto'>TYPESCRIPT</span>
                     </div>
@@ -65,6 +75,14 @@ function About() {
                     <div className='col-3 skills d-flex flex-column text-center p-2 align-items-center'>
                         <img src={git} className='w-50' alt="" />
                         <span className='mt-auto'>GIT</span>
+                    </div>
+                    <div className='col-3 skills d-flex flex-column text-center p-2 align-items-center'>
+                        <img src={php} className='w-50' alt="" />
+                        <span className='mt-auto'>PHP</span>
+                    </div>
+                    <div className='col-3 skills d-flex flex-column text-center p-2 align-items-center'>
+                        <img src={laravel} className='w-50' alt="" />
+                        <span className='mt-auto'>LARAVEL</span>
                     </div>
                 </div>
             </div>
