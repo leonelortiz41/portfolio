@@ -41,16 +41,7 @@ function Projects() {
                         <a href="https://notes41.netlify.app/" target='_blank' className="btn mx-auto btn-blackgreen">Website</a>
                     </div>
                 </div>
-                <div className="card d-flex pb-1  m-1 justify-content-between card-blur text-white p-0 animation-show shadow-sm col-" style={{ maxWidth: "400px" }}>
-                    <img src={dromo} className="card-img-top" />
-                    <div className=" d-flex flex-column p-2 justify-content-center mt-auto h-100 justify-content-between">
-                        <div>
-                            <h5 className="card-title m-auto text-center">DROMO GYM</h5>
-                            <p className="card-text">Administrador de datos y rutinas de un gimnacio.</p>
-                        </div>
-                        <a href="https://dromo.netlify.app/" target='_blank' className="btn mx-auto btn-blackgreen">Website</a>
-                    </div>
-                </div>
+                
                 <div className="card d-flex pb-1  m-1 justify-content-between card-blur text-white p-0 animation-show shadow-sm col-" style={{ maxWidth: "400px" }}>
                     <img src={cirobarber} className="card-img-top" />
                     <div className=" d-flex flex-column p-2 justify-content-center mt-auto h-100 justify-content-between">
