@@ -12,7 +12,7 @@ function Contact() {
       <form className='col-11 col-md-8 d-flex flex-column  justify-content-center' action="https://formsubmit.co/c.leonelortiz10@gmail.com" method="POST" onSubmit={()=> window.location.reload()} >
         <label className='col-sm-8 rounded mb-2 d-flex flex-row p-1 justify-content-center  w-100'>
           <p className='my-auto text-end col-sm-3'>Name:</p>
-          <input className='p-2  text-white col-sm-8' type="text" name='name' placeholder='Your name' />
+          <input className='p-2  text-white col-sm-8' type="text" name='name' placeholder='Your name' onBlur={(e)=>{console.log("aksj")}} />
         </label>
         <label className='col-sm-8 rounded mb-2 d-flex flex-row p-1 justify-content-center  w-100'>
           <p className='my-auto text-end col-sm-3'>Email:</p>

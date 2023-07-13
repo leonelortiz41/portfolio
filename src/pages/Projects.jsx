@@ -5,10 +5,12 @@ import dromo from '../assets/dromo.png'
 import cirobarber from '../assets/cirobarber.png'
 
 function Projects() {
+    console.log(window.location.pathname)
+
     return (
         <div className="container-fluid text-center mx-auto " style={{ marginTop: "130px" }}>
-            <h2>My projects:</h2>
             <div className='row p-2 rounded mx-auto justify-content-center container-fluid '>
+                <h2 className='animation-show '>My projects:</h2>
                 <div className="card d-flex pb-1  m-1 justify-content-between card-blur text-white p-0 animation-show  shadow-sm col-" style={{ maxWidth: "400px" }}>
                     <img src={storeip} className="card-img-top" />
                     <div className=" d-flex flex-column p-2 justify-content-center mt-auto h-100 justify-content-between">
