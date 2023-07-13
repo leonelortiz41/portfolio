@@ -1,14 +1,14 @@
 body {
     background-image: linear-gradient(to bottom,
             #000000,
-            rgba(38, 70, 38, 0.5)),
+            #0000008a),
         url("../src/assets/bg-4.svg");
     background-size: cover;
     background-attachment: fixed;
     user-select: none;
     color: #fff;
     overflow-x: hidden;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .pointer {
