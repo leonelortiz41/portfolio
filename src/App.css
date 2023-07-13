@@ -137,34 +137,36 @@ input[type="email"] {
 
 @keyframes text-gradient {
     0% {
-        background: linear-gradient(to right, #fff, #e1ff00);
+        opacity: 0%;
+        background: linear-gradient(to right, #fff, #000);
         -webkit-text-fill-color: transparent;
         -webkit-background-clip: text;
     }
-
+    
     20% {
         background: linear-gradient(to top, #fff, #e1ff00);
+        text-shadow:
+            0 0 2px #e1ff00,
+            0 0 5px #e1ff00,
+            0 0 5px #e1ff00;
         -webkit-text-fill-color: transparent;
         -webkit-background-clip: text;
+        opacity: 100%;
     }
 
     60% {
-        background: linear-gradient(to left, #fff, #e1ff00);
+        opacity: 50%;
+        background: linear-gradient(to left, #000, #e1ff00);
         -webkit-text-fill-color: transparent;
         -webkit-background-clip: text;
         translate: -30px;
-    }
 
-    80% {
-        background: linear-gradient(to bottom, #fff, #e1ff00);
-        -webkit-text-fill-color: transparent;
-        -webkit-background-clip: text;
     }
-
     100% {
-        background: linear-gradient(to right, #fff, #e1ff00);
+        background: linear-gradient(to right, #fff, #000);
         -webkit-text-fill-color: transparent;
         -webkit-background-clip: text;
+        opacity: 0%;
     }
 }
 
