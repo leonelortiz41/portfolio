@@ -1,8 +1,6 @@
 body {
-    background-image: linear-gradient(to bottom,
-            #000000,
-            #0000008a),
-        url("../src/assets/bg-4.svg");
+    background-image: 
+        url("../src/assets/bg-2.svg");
     background-size: cover;
     background-attachment: fixed;
     user-select: none;
@@ -11,6 +9,12 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+@media (width<=800px) {
+    body {
+        background-image: 
+            url("../src/assets/bg-3.svg");
+    }
+}
 .pointer {
     cursor: pointer;
 }
