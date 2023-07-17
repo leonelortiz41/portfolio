@@ -77,15 +77,15 @@ body {
 @keyframes intro {
     0% {
         opacity: 0%;
-        translate: -450px 50px;
-        transform: scale(0.003);
+        transform: scale(1.9);
+        transform: skew( -30deg);
     }
     50% {
-        transform: skew( 30deg);
+        opacity: 20%;
     }
-
-    80%{
-        transform: scale(1.1);
+    
+    60%{
+        transform: scale(0.8);
     }
     100% {
         opacity: 100%;
@@ -120,11 +120,11 @@ input[type="email"] {
 }
 
 ::-webkit-scrollbar-track {
-    background: #151515;
+    background: #000;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #d4ffcef3;
+    background: #111;
     border-radius: 5px;
 }
 
