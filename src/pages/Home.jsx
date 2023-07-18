@@ -1,4 +1,4 @@
-import perfil from '../assets/perfil4.png'
+import perfil from '../assets/perfil4.webp'
 function Home() {
     return (
         <div className={"container-fluid body-home  d-flex flex-column flex-sm-row  justify-content-center align-items-center py-3 m-auto h-100 w-100 animation-show"}>

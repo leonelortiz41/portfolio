@@ -4,6 +4,7 @@ body {
     background-size: cover;
     background-attachment: fixed;
     user-select: none;
+    --colo:red;
     color: #fff;
     overflow-x: hidden;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -43,6 +44,7 @@ body {
 }
 
 .btn {
+    color: var(--colo,orange);
     border: none;
 }
 
