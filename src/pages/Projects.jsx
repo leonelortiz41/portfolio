@@ -21,7 +21,7 @@ function Projects() {
                         <a href="https://storeip.netlify.app" target='_blank' className="btn mx-auto btn-blackgreen">Website</a>
                     </div>
                 </div>
-                <div className="card d-flex pb-1  m-1 justify-content-between card-blur text-white p-0 animation-show shadow-sm col-" style={{ maxWidth: "400px" }}>
+                {/* <div className="card d-flex pb-1  m-1 justify-content-between card-blur text-white p-0 animation-show shadow-sm col-" style={{ maxWidth: "400px" }}>
                     <img src={barlpdemo} className="card-img-top" />
                     <div className=" d-flex flex-column p-2 justify-content-center mt-auto h-100 justify-content-between">
                         <div>
@@ -41,7 +41,7 @@ function Projects() {
                         <a href="https://notes41.netlify.app/" target='_blank' className="btn mx-auto btn-blackgreen">Website</a>
                     </div>
                 </div>
-                
+                 */}
                 <div className="card d-flex pb-1  m-1 justify-content-between card-blur text-white p-0 animation-show shadow-sm col-" style={{ maxWidth: "400px" }}>
                     <img src={cirobarber} className="card-img-top" />
                     <div className=" d-flex flex-column p-2 justify-content-center mt-auto h-100 justify-content-between">
