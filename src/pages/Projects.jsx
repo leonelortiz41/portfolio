@@ -3,6 +3,7 @@ import barlpdemo from '../assets/barlpdemo.png'
 import notes from '../assets/notes.png'
 import dromo from '../assets/dromo.png'
 import cirobarber from '../assets/cirobarber.png'
+import ligadefut from '../assets/ligadefut.webp'
 
 function Projects() {
     console.log(window.location.pathname)
@@ -21,7 +22,18 @@ function Projects() {
                         <a href="https://storeip.netlify.app" target='_blank' className="btn mx-auto btn-blackgreen">Website</a>
                     </div>
                 </div>
-                {/* <div className="card d-flex pb-1  m-1 justify-content-between card-blur text-white p-0 animation-show shadow-sm col-" style={{ maxWidth: "400px" }}>
+                <div className="card d-flex pb-1  m-1 justify-content-between card-blur text-white p-0 animation-show  shadow-sm col-" style={{ maxWidth: "400px" }}>
+                    <img src={ligadefut} className="card-img-top" />
+                    <div className=" d-flex flex-column p-2 justify-content-center mt-auto h-100 justify-content-between">
+                        <div>
+                            <h5 className="card-title m-auto text-center">Liga de futbol</h5>
+                            <p className="card-text">Organizador de torneo de futbol que gestiona un fixture y la tabla de posiciones.</p>
+                        </div>
+                        <a href="https://ligafutbol.vercel.app/" target='_blank' className="btn mx-auto btn-blackgreen">Website</a>
+                    </div>
+                </div>
+                
+                 <div className="card d-flex pb-1  m-1 justify-content-between card-blur text-white p-0 animation-show shadow-sm col-" style={{ maxWidth: "400px" }}>
                     <img src={barlpdemo} className="card-img-top" />
                     <div className=" d-flex flex-column p-2 justify-content-center mt-auto h-100 justify-content-between">
                         <div>
@@ -31,6 +43,7 @@ function Projects() {
                         <a href="https://barlp-demo.netlify.app" target='_blank' className="btn mx-auto btn-blackgreen">Website</a>
                     </div>
                 </div>
+                {/*
                 <div className="card d-flex pb-1  m-1 justify-content-between card-blur text-white p-0 animation-show shadow-sm col-" style={{ maxWidth: "400px" }}>
                     <img src={notes} className="card-img-top" />
                     <div className=" d-flex flex-column p-2 justify-content-center mt-auto h-100 justify-content-between">

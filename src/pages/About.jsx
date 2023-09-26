@@ -22,10 +22,10 @@ function About() {
             <div className="col-lg-6 card-blur d-flex flex-column rounded justify-content-center p-3 animation-show ">
                 <h3 className='text-center text-web'>About me</h3>
                 <p className=''>
-                    Soy Leonel, un profesional con formación en desarrollo de software y estudiante de ingeniería en sistemas de información en UTN, tengo 23 años y vivo en Tucumán, Argentina. Del lado del frontend he trabajado como diseñador, maquetador y desarrollador, y del lado backend he trabajado principalmente creando API. Estoy para sumar mis conocimientos a un equipo de trabajo y siga desarrollando mis habilidades como profesional.
-                    <img src={arg} className='ms-2' style={{ height: "25px" }} />
+                    Soy Leonel, un profesional con formación en desarrollo de software y estudiante de ingeniería en sistemas de información en UTN, tengo 23 años y vivo en Tucumán, Argentina. Mis habilidades principales son el manejo de MERN, pero abierto a diferentes tecnologías. Estoy para sumar mis conocimientos a un equipo de trabajo y seguir desarrollando mis habilidades como profesional.
+                    {/* <img src={arg} className='ms-2' style={{ height: "25px" }} /> */}
                 </p>
-                <a className="btn btn-blackgreen d-block ms-auto me-4" href={`https://www.dropbox.com/scl/fi/ejajsari9kkmbnaafow3g/cv-OrtizCarlosLeonel.pdf?rlkey=cw873511pqoolo3vtvz0tidzt&dl=0`} target='_blank'>Donwload CV</a>
+                <a className="btn btn-blackgreen d-block ms-auto me-4" href={`https://www.dropbox.com/scl/fi/n7sb3a6jqz5rcn5jxrtnk/cv-OrtizCarlosLeonel.pdf?rlkey=a4cjv4xhezsncmhqtbqkswxzm&dl=0`} target='_blank'>Donwload CV</a>
             </div>
             <div className="col-lg-5 card-blur rounded text-center my-4 my-lg-0 p-1 animation-show ">
                 <h3 className='text-web'>My skills</h3>
