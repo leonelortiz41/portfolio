@@ -4,15 +4,26 @@ import notes from '../assets/notes.png'
 import dromo from '../assets/dromo.png'
 import cirobarber from '../assets/cirobarber.png'
 import ligadefut from '../assets/ligadefut.webp'
+import {useEffect,useState,useRef} from 'react'
 
 function Projects() {
-    console.log(window.location.pathname)
+
+    const refProjects = useRef(null)
+    const [isVisible, setIsVisible] = useState(false)
+    useEffect(() => {
+        const ovserver = new IntersectionObserver((e) => {
+            if (e[0].isIntersecting == true) e[0].target.classList.add("show");
+            else e[0].target.classList.remove("show");},{threshold:0.25});
+        if (refProjects.current) ovserver.observe(refProjects.current)
+    })
 
     return (
-        <div className="container-fluid text-center mx-auto " style={{ marginTop: "130px" }}>
-            <div className='row p-2 rounded mx-auto justify-content-center container-fluid animation-show'>
-                <h2 className='text-web'>My projects:</h2>
-                <div className="card d-flex pb-1  m-1 justify-content-between card-blur text-white p-0 animation-show  shadow-sm col-" style={{ maxWidth: "400px" }}>
+        <div id='Projects' className='body-projects container d-flex align-items-center m-auto'>
+
+        <div ref={refProjects} className="container mb-5 text-center mx-auto  animation-show oculto" >
+            <h2 className='text-web'>My projects:</h2>
+            <div className=' rounded  container-projects col-md-9'>
+                <div className="card d-flex  card-blur text-white p-0 animation-show  shadow-sm col-" >
                     <img src={storeip} className="card-img-top" />
                     <div className=" d-flex flex-column p-2 justify-content-center mt-auto h-100 justify-content-between">
                         <div>
@@ -22,7 +33,7 @@ function Projects() {
                         <a href="https://storeip.netlify.app" target='_blank' className="btn mx-auto btn-blackgreen">Website</a>
                     </div>
                 </div>
-                <div className="card d-flex pb-1  m-1 justify-content-between card-blur text-white p-0 animation-show  shadow-sm col-" style={{ maxWidth: "400px" }}>
+                <div className="card d-flex    card-blur text-white p-0 animation-show  shadow-sm col-" >
                     <img src={ligadefut} className="card-img-top" />
                     <div className=" d-flex flex-column p-2 justify-content-center mt-auto h-100 justify-content-between">
                         <div>
@@ -32,8 +43,8 @@ function Projects() {
                         <a href="https://ligafutbol.vercel.app/" target='_blank' className="btn mx-auto btn-blackgreen">Website</a>
                     </div>
                 </div>
-                
-                 <div className="card d-flex pb-1  m-1 justify-content-between card-blur text-white p-0 animation-show shadow-sm col-" style={{ maxWidth: "400px" }}>
+
+                <div className="card d-flex    card-blur text-white p-0 animation-show shadow-sm col-" >
                     <img src={barlpdemo} className="card-img-top" />
                     <div className=" d-flex flex-column p-2 justify-content-center mt-auto h-100 justify-content-between">
                         <div>
@@ -44,7 +55,7 @@ function Projects() {
                     </div>
                 </div>
                 {/*
-                <div className="card d-flex pb-1  m-1 justify-content-between card-blur text-white p-0 animation-show shadow-sm col-" style={{ maxWidth: "400px" }}>
+                <div className="card d-flex    card-blur text-white p-0 animation-show shadow-sm col-" >
                     <img src={notes} className="card-img-top" />
                     <div className=" d-flex flex-column p-2 justify-content-center mt-auto h-100 justify-content-between">
                         <div>
@@ -55,7 +66,7 @@ function Projects() {
                     </div>
                 </div>
                  */}
-                <div className="card d-flex pb-1  m-1 justify-content-between card-blur text-white p-0 animation-show shadow-sm col-" style={{ maxWidth: "400px" }}>
+                <div className="card d-flex    card-blur text-white p-0 animation-show shadow-sm col-" >
                     <img src={cirobarber} className="card-img-top" />
                     <div className=" d-flex flex-column p-2 justify-content-center mt-auto h-100 justify-content-between">
                         <div>
@@ -65,6 +76,7 @@ function Projects() {
                         <a href="https://cirobarber.netlify.app/" target='_blank' className="btn mx-auto btn-blackgreen">Website</a>
                     </div>
                 </div>
+            </div>
             </div>
         </div>
     )
