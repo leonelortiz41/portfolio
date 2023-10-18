@@ -1,4 +1,4 @@
-import perfil from '../assets/perfil4.webp'
+import perfil from '../assets/perfil7.webp'
 import { useEffect, useState, useRef } from 'react'
 import { BsArrowUpCircleFill } from 'react-icons/bs'
 

@@ -149,9 +149,7 @@ textarea:focus {
 }
 
 .perfil {
-    border-left: solid 2px #000;
-    border-bottom: solid 2px #5effb9;
-    animation: animation-2 infinite;
+
 }
 
 ::-webkit-scrollbar {
