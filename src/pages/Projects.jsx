@@ -21,7 +21,7 @@ function Projects() {
         <div id='Projects' className='body-projects container d-flex align-items-center m-auto'>
 
         <div ref={refProjects} className="container mb-5 text-center mx-auto  animation-show oculto" >
-            <h2 className='text-web'>My projects:</h2>
+            <h2 className='text-web'>Proyectos:</h2>
             <div className=' rounded  container-projects col-md-9'>
                 <div className="card d-flex  card-blur text-white p-0 animation-show  shadow-sm col-" >
                     <img src={storeip} className="card-img-top" />

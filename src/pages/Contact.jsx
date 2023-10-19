@@ -38,7 +38,7 @@ function Contact() {
             <p className='my-auto text-end col-sm-3'>Mensaje:</p>
             <textarea className='p-2  text-white col-sm-8 align-bottom overflow-auto' name='message' style={{ height: "100px" }} placeholder='Tu mensaje' />
           </label>
-          <button type='submit' className='btn btn-blackgreen d-block mx-auto mt-3'><BsSendFill/></button>
+          <button type='submit' className='btn btn-blackgreen d-block mx-auto mt-3'>Enviar</button>
           <input type='hidden' name='_next' value={window.location.href}></input>
           <input type='hidden' name='_captcha' value="false"></input>
         </form>
