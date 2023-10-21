@@ -9,6 +9,7 @@ import tailwind from '../assets/tailwind.png'
 import materialui from '../assets/materialui.png'
 import node from '../assets/node.png'
 import php from '../assets/php.png'
+import cv from '../assets/cv-OrtizCarlosLeonel.pdf'
 import laravel from '../assets/laravel.png'
 import typescript from '../assets/typescript.png'
 import git from '../assets/git.png'
@@ -136,8 +137,8 @@ function About() {
                     <p className=''>
                         Mi nombre es Leonel, soy desarrollador web especializado en MERN. Mi foco esta en que las experiencias web sean funcionales e interactivas estando atento al detalle. Estoy preparado para darle vida al proyecto digital que tienes en mente.
                     </p>
-                    <a className="btn btn-blackgreen d-block ms-auto me-4" href={`https://www.dropbox.com/scl/fi/n7sb3a6jqz5rcn5jxrtnk/cv-OrtizCarlosLeonel.pdf?rlkey=a4cjv4xhezsncmhqtbqkswxzm&dl=0`} target='_blank'>Descargar CV</a>
-                    {/* <a href="./cv-OrtizCarlosLeonel.pdf" download="cv-ortiz.pdf">Download the pdf</a> */}
+                    {/* <a  href={`https://www.dropbox.com/scl/fi/n7sb3a6jqz5rcn5jxrtnk/cv-OrtizCarlosLeonel.pdf?rlkey=a4cjv4xhezsncmhqtbqkswxzm&dl=0`} target='_blank'>Descargar CV</a> */}
+                    <a className="btn btn-blackgreen d-block ms-auto me-4" href={cv} download="cv-ortiz.pdf">Download CV</a>
                 </div>
                 <div className="col-md-7  rounded text-center my-4 my-lg-0 p-1 animation-show overflow-hidden ">
                     <h3 className='text-web h1'>Habilidades</h3>
