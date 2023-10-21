@@ -11,7 +11,7 @@ function Contact() {
     const ovserver = new IntersectionObserver((e) => {
       if (e[0].isIntersecting == true) e[0].target.classList.add("show");
       else e[0].target.classList.remove("show");
-    },{threshold:0.25});
+    },{threshold:0.30});
     if (refContact.current) ovserver.observe(refContact.current)
   })
 

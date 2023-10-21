@@ -230,12 +230,19 @@ textarea:focus {
     0% {
         opacity: 0%;
         filter: blur(20px);
+        top: 100%;
+        transform: translateY(205px) scaleX(0.5);
     }
+50%{
+    filter: blur(3px);
+    transform: translateY(0px);
 
+}
     100% {
         opacity: 100%;
     }
 }
+
 
 .marquee {
     height: 50%;
