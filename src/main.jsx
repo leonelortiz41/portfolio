@@ -2,30 +2,22 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './App.css'
 import Header from './components/Header'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Home from './pages/Home'
 import About from './pages/About'
 import Contact from './pages/Contact'
 import Projects from './pages/Projects'
+import { BrowserRouter as Router, Link } from 'react-router-dom'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <div className='d-flex flex-column'>
-      <BrowserRouter>
-      <Header />
-        {/* <Header />
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='About' element={<About/>} />
-          <Route path='Projects' element={<Projects/>} />
-          <Route path='Contact' element={<Contact/>} />
-        </Routes>
-        <Footer/>  */}
-        <Home />
-        <About />
-        <Projects />
-        <Contact />
-      </BrowserRouter>
+      <Router>
+        <Header />
+        <div id="home"><Home /></div>
+        <div id="about"><About /></div>
+        <div id="projects"><Projects /></div>
+        <div id="contact"><Contact /></div>
+      </Router>
     </div>
   </React.StrictMode>,
 )

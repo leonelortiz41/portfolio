@@ -1,23 +1,26 @@
-body {
-    background-image:
-        url("../src/assets/bg-2.svg");
-    background-size: cover;
-    /* background-attachment: fixed; */
-    background-repeat: repeat-y;
-    user-select: none;
-    color: #fff;
-    /* overflow: overlay; */
-    overflow-x: hidden;
-    scroll-behavior: smooth;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, Geneva, Tahoma, sans-serif;
+:root {
+    --primary-color: #5effb9;
+    --background-img: url("../src/assets/bg-2.svg");
+    --bg-blur: rgba(0, 0, 0, 0.256);
+    --text-color: #fff;
+    --font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, Geneva, Tahoma, sans-serif;
 }
 
-@media (width<=800px) {
+body {
+    background-image: var(--background-img);
+    background-size: cover;
+    background-repeat: repeat-y;
+    user-select: none;
+    color: var(--text-color);
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    font-family: var(--font-family);
+}
+
+@media (max-width: 800px) {
     body {
-        background-image:
-            url("../src/assets/bg-3.svg");
-            /* background-size: cover; */
-    background-attachment: fixed;
+        background-image: url("../src/assets/bg-3.svg");
+        background-attachment: fixed;
     }
 }
 
@@ -26,17 +29,16 @@ body {
 }
 
 .skills:hover {
-    filter: drop-shadow(2px -2px 4px #5effb9);
+    filter: drop-shadow(2px -2px 4px var(--primary-color));
 }
 
 .card-blur {
-    background: rgba(0, 0, 0, 0.256);
+    background: var(--bg-blur);
     backdrop-filter: blur(7px);
-
 }
 
 .body-header {
-    box-shadow: 1px 1px 11px #5effb9;
+    box-shadow: 1px 1px 11px var(--primary-color);
     z-index: 100;
     position: sticky;
     top: 0;
@@ -47,16 +49,14 @@ body {
     font-size: 25px;
 }
 
-
 .btn {
-    color: #5effb9;
+    color: var(--primary-color);
     transition: all .3s;
     border: none;
 }
 
-
 .btn-blackgreen {
-    color: #5effb9;
+    color: var(--primary-color);
 }
 
 .btn-blackgreen:hover {
@@ -64,24 +64,26 @@ body {
     transform: scale(1.2);
 }
 
-.subir{
+.subir {
     transition: all 1s;
     border: none;
     background: transparent;
-    color: #5effb9;
+    color: var(--primary-color);
     font-size: 50px;
     height: 50px;
     width: 50px;
     position: fixed;
-    top:90%;
+    top: 90%;
     right: 2%;
-    animation: animation-subir 3s infinite ease-in ;
+    animation: animation-subir 3s infinite ease-in;
 }
-.subir:active{
+
+.subir:active {
     transition: .1s;
     transform: scale(1.2);
     color: #fff;
 }
+
 .body-contact {
     min-height: 100vh;
 }
@@ -95,61 +97,25 @@ body {
     transform: scale(1.5);
 }
 
-
-
-@keyframes intro {
-    0% {
-        opacity: 0%;
-        transform: scale(1.9);
-        transform: skew(-30deg);
-    }
-
-    50% {
-        opacity: 20%;
-    }
-
-    60% {
-        transform: scale(0.8);
-    }
-
-    100% {
-        opacity: 100%;
-    }
-}
-
-@keyframes animation-subir{
-    50%{
-        transform: translateY(-10px);
-    }
-}
-
-
 label {
     background: rgba(19, 22, 16, 0.212);
 }
 
 label p {
-    color: #5effb9;
+    color: var(--primary-color);
 }
 
-input[type="text"],
-textarea,
-input[type="email"] {
+input[type="text"], textarea, input[type="email"] {
     outline: none;
     margin-left: 4px;
     background: transparent;
     border: none;
 }
 
-input:focus,
-textarea:focus {
+input:focus, textarea:focus {
     background: #fff1;
     outline: 2px solid #fff2;
     border-radius: 15px;
-}
-
-.perfil {
-
 }
 
 ::-webkit-scrollbar {
@@ -157,26 +123,15 @@ textarea:focus {
     background: #000;
 }
 
-
 ::-webkit-scrollbar-thumb {
     background: #111;
     border-radius: 5px;
 }
 
-.body-home {
-    display: block;
+.body-home, .body-projects, .body-about {
     min-height: 100vh;
     width: 100vw;
 }
-
-.body-projects {
-    min-height: 100vh;
-}
-
-.body-about {
-    min-height: 100vh;
-}
-
 
 .container-projects {
     display: flex;
@@ -185,14 +140,9 @@ textarea:focus {
     align-items: center;
     margin: auto;
     justify-content: space-evenly;
-    align-items: stretch;
     scroll-behavior: smooth;
 }
 
-.body-contact button[type="submit"]{
-    color: #5effb9;
-    font-size: 30px;
-}
 .container-projects .card-blur {
     width: 45%;
     margin: 4px;
@@ -200,30 +150,9 @@ textarea:focus {
     margin-inline: 3px;
 }
 
-@keyframes show-image {
-    from {
-        transform: scale(0.76);
-    }
-
-    to {
-        transform: scale(1.2);
-    }
-
-}
-
-.oculto {
-    opacity: 0%;
-    transition: all .9s;
-}
-.show-sub {
-    opacity: 100%;
-}
-.show {
-    opacity: 100%;
-    animation: show-entry;
-    animation-duration: .66s;
-    animation-iteration-count: 1;
-    animation-timing-function: linear;
+.body-contact button[type="submit"] {
+    color: var(--primary-color);
+    font-size: 30px;
 }
 
 @keyframes show-entry {
@@ -233,25 +162,60 @@ textarea:focus {
         top: 100%;
         transform: translateY(205px) scaleX(0.5);
     }
-50%{
-    filter: blur(3px);
-    transform: translateY(0px);
-
-}
+    50% {
+        filter: blur(3px);
+        transform: translateY(0px);
+    }
     100% {
         opacity: 100%;
     }
+}
+
+@keyframes hide-exit {
+    0% {
+        opacity: 100%;
+        filter: blur(3px);
+    }
+    50% {
+        opacity: 50%;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 0%;
+        filter: blur(20px);
+    }
+}
+
+.oculto {
+    opacity: 0%;
+    transition: all 0.33s;
+}
+
+.show-sub {
+    opacity: 100%;
+}
+
+.show {
+    opacity: 100%;
+    animation: show-entry 0.33s linear 1;
+}
+
+.hide {
+    animation: hide-exit 0.33s linear 1;
+    opacity: 0%;
 }
 
 
 .marquee {
     height: 50%;
 }
-.marquee-2{
+
+.marquee-2 {
     display: grid;
     grid-template-columns: auto auto auto;
     width: 100%;
 }
+
 .marquee div img {
     height: 100%;
 }
@@ -263,26 +227,19 @@ textarea:focus {
         -webkit-text-fill-color: transparent;
         -webkit-background-clip: text;
     }
-
     20% {
-        background: linear-gradient(to top, #fff, #5effb9);
-        text-shadow:
-            0 0 2px #5effb9,
-            0 0 5px #5effb9,
-            0 0 5px #5effb9;
+        background: linear-gradient(to top, #fff, var(--primary-color));
+        text-shadow: 0 0 2px var(--primary-color), 0 0 5px var(--primary-color), 0 0 5px var(--primary-color);
         -webkit-text-fill-color: transparent;
         -webkit-background-clip: text;
         opacity: 90%;
     }
-
     50% {
         opacity: 50%;
-        background: linear-gradient(to left, #000, #5effb9);
+        background: linear-gradient(to left, #000, var(--primary-color));
         -webkit-text-fill-color: transparent;
         -webkit-background-clip: text;
-
     }
-
     100% {
         background: linear-gradient(to right, #fff, #000);
         -webkit-text-fill-color: transparent;
@@ -292,51 +249,38 @@ textarea:focus {
 }
 
 .text-web {
-    animation-name: text-gradient;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    animation: text-gradient 2s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
 }
 
 @keyframes animation-1 {
-    0% {
+    0%, 100% {
         color: #000;
-        text-shadow:
-            0 0 2px #5effb9,
-            0 0 5px #5effb9,
-            0 0 5px #5effb9,
-            0 0 9px #5effb9,
-            0 0 10px #5effb9,
-            0 0 12px #5effb9,
-            0 0 15px #5effb9,
-            0 0 19px #5effb9;
+        text-shadow: 0 0 2px var(--primary-color), 0 0 5px var(--primary-color), 0 0 9px var(--primary-color), 0 0 10px var(--primary-color), 0 0 12px var(--primary-color), 0 0 15px var(--primary-color), 0 0 19px var(--primary-color);
     }
-
     40% {
         color: #000;
-        text-shadow:
-            0 0 2px #5effb9,
-            0 0 8px #5effb9;
-    }
-
-    100% {
-        color: #000;
-        text-shadow:
-            0 0 2px #5effb9,
-            0 0 5px #5effb9,
-            0 0 5px #5effb9,
-            0 0 9px #5effb9,
-            0 0 10px #5effb9,
-            0 0 12px #5effb9,
-            0 0 15px #5effb9,
-            0 0 19px #5effb9;
+        text-shadow: 0 0 2px var(--primary-color), 0 0 8px var(--primary-color);
     }
 }
 
 .btn-nav:hover {
-    animation-name: animation-1;
-    animation-duration: 1.6s;
-    animation-iteration-count: infinite;
-    animation-delay: 0s;
-    animation-timing-function: ease-out;
+    animation: animation-1 1.6s ease-out infinite;
 }
+
+html {
+    scroll-behavior: smooth;
+  }
+  
+  .spinner {
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
