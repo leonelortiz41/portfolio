@@ -134,6 +134,7 @@ input:focus, textarea:focus {
 }
 
 .container-projects {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     scroll-snap-type: x mandatory;
@@ -284,3 +285,56 @@ html {
     }
   }
   
+.carrusel{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 90%;
+    height: 28rem;
+    display: flex;
+}
+
+  .uniform-card-size {
+    width: 40%;
+    margin: auto;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* App.css */
+.horizontal-scroll {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px; /* Espacio entre las cards */
+    scroll-behavior: smooth;
+    padding: 10px 0;
+    width: 55%;
+    margin: auto;
+}
+
+.horizontal-scroll::-webkit-scrollbar {
+    height: 8px;
+}
+
+.horizontal-scroll::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 10px;
+}
+
+.horizontal-scroll::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.card {
+    flex: 0 0 300px; /* Ancho fijo para las cards */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.card:active {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
