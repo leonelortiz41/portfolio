@@ -48,7 +48,7 @@ function Contact() {
   };
 
   return (
-    <div id='Contact' className='my-auto align-items-center d-flex body-contact'>
+    <div id='Contact' className=' align-items-center d-flex body-contact'>
       <div ref={refContact} className='m-auto justify-content-center align-items-center d-flex flex-column p-2 col-11 col-sm-8 card-blur rounded animation-show oculto'>
         <ul className='p-2'>
           <a href='https://wa.me/543813867770' target='_blank' className='btn text-white text-start'><ImWhatsapp /></a>

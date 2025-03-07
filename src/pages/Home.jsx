@@ -1,6 +1,7 @@
 import perfil from '../assets/perfil7.webp'
 import { useEffect, useState, useRef } from 'react'
 import { BsArrowUpCircleFill } from 'react-icons/bs'
+import "../App.css"
 
 function Home() {
 
@@ -49,13 +50,14 @@ function Home() {
                 <BsArrowUpCircleFill className='w-100' />
             </button>
             <div ref={refHome} className='d-flex flex-column flex-sm-row justify-content-center align-items-center animation-show oculto'>
-                <div className="d-flex flex-column text-end">
+                <div className="perfil rounded-circle  overflow-hidden" style={{ height: "230px", width: "230px" }}>
+                    <img src={perfil} className='w-100' alt="Leonel Ortiz" />
+                </div>
+                <div className="d-flex flex-column text-center">
                     <h1>Hi!<br />I am Leonel Ortiz</h1>
                     <h2 className="text-web">Full-Stack Developer</h2>
                 </div>
-                <div className="perfil rounded-circle ms-3 overflow-hidden" style={{ height: "230px", width: "230px" }}>
-                    <img src={perfil} className='w-100' alt="Leonel Ortiz" />
-                </div>
+
             </div>
         </div>
     )
