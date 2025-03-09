@@ -15,21 +15,21 @@ function Header({ toggleTheme, theme, toggleLanguage, language }) {
         </label>
       </div>
       <button className='btn btn-lang' onClick={toggleLanguage}>
-        {language === 'en' ? 'Español' : 'English'}
+        {language === 'en' ? 'English' : 'Español'}
       </button>
       <section className="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
         <ul className="nav nav-tabs d-flex justify-content-center my-auto card-header-tabs">
           <li className="nav-item">
-            <Link className='btn btn-nav' to="/">{language === 'en' ? 'Home' : 'Inicio'}</Link>
+            <a className='btn btn-nav' href="#">{language === 'en' ? 'Home' : 'Inicio'}</a>
           </li>
           <li className="nav-item">
-            <Link className='btn btn-nav' to="/about">{language === 'en' ? 'About me' : 'Sobre mí'}</Link>
+            <a className='btn btn-nav' href="#about">{language === 'en' ? 'About me' : 'Sobre mí'}</a>
           </li>
           <li className="nav-item">
-            <Link className='btn btn-nav' to="/projects">{language === 'en' ? 'Projects' : 'Proyectos'}</Link>
+            <a className='btn btn-nav' href="#projects">{language === 'en' ? 'Projects' : 'Proyectos'}</a>
           </li>
           <li className="nav-item">
-            <Link className='btn btn-nav' to="/contact">{language === 'en' ? 'Contact' : 'Contacto'}</Link>
+            <a className='btn btn-nav' href="#Contact">{language === 'en' ? 'Contact' : 'Contacto'}</a>
           </li>
         </ul>
       </section>

@@ -7,6 +7,8 @@
     --bg-blur-light: rgba(255, 255, 255, 0.256);
     --text-color-dark: #fff;
     --text-color-light: #000;
+    --text-color-light-op: #fff;
+    --text-color-dark-op: #000;
     --font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, Geneva, Tahoma, sans-serif;
 }
 
@@ -14,6 +16,7 @@
     --background-img: var(--background-img-dark);
     --bg-blur: var(--bg-blur-dark);
     --text-color: var(--text-color-dark);
+    --text-color-op: var(--text-color-dark-op);
     --primary-color: var(--primary-color-dark)
 }
 
@@ -21,6 +24,7 @@
     --background-img: var(--background-img-light);
     --bg-blur: var(--bg-blur-light);
     --text-color: var(--text-color-light);
+    --text-color-op: var(--text-color-light-op);
     --primary-color: var(--primary-color-light)
 }
 
@@ -383,7 +387,7 @@ html {
 
 .btn-lang {
     background-color: var(--primary-color);
-    color: white;
+    color: var(--text-color-op);
     border: none;
     height: 30px;
     border-radius: 5px;
@@ -393,6 +397,7 @@ html {
 
 .btn-lang:hover {
     background-color: var(--primary-color);
+    color: var(--text-color-op);
     transform: scale(1.1);
 }
 
@@ -432,7 +437,7 @@ html {
 }
 
 .slider:before {
-    background-color: white;
+    background-color: var(--text-color-op);
     bottom: 4px;
     content: "";
     height: 22px;
