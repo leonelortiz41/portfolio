@@ -3,7 +3,7 @@ import { ImWhatsapp, ImLinkedin, ImGithub } from "react-icons/im";
 import { BsSendFill } from "react-icons/bs";
 import { FaSpinner } from 'react-icons/fa'; // Importar el icono de carga
 
-function Contact() {
+function Contact({ language }) {
 
   const refContact = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
@@ -57,24 +57,24 @@ function Contact() {
         </ul>
         <form className='col-11 col-md-8 d-flex flex-column justify-content-center' onSubmit={handleSubmit}>
           <label className='col-sm-8 rounded mb-2 d-flex flex-row p-1 justify-content-center w-100'>
-            <p className='my-auto text-end col-sm-3'>Name:</p>
-            <input className='p-2 text-white col-sm-8' type="text" name='name' placeholder='Tu Nombre' required />
+            <p className='my-auto text-end col-sm-3'>{language === 'en' ? 'Name:' : 'Nombre:'}</p>
+            <input className='p-2 text-white col-sm-8' type="text" name='name' placeholder={language === 'en' ? 'Your Name' : 'Tu Nombre'} required />
           </label>
           <label className='col-sm-8 rounded mb-2 d-flex flex-row p-1 justify-content-center w-100'>
             <p className='my-auto text-end col-sm-3'>Email:</p>
             <input className='p-2 text-white col-sm-8' type="email" name='email' placeholder='email@email.com' required />
           </label>
           <label className='col-sm-8 rounded mb-2 d-flex flex-row p-1 justify-content-center w-100'>
-            <p className='my-auto text-end col-sm-3'>Message:</p>
-            <textarea className='p-2 text-white col-sm-8 align-bottom overflow-auto' name='message' style={{ height: "100px" }} placeholder='Tu mensaje' required />
+            <p className='my-auto text-end col-sm-3'>{language === 'en' ? 'Message:' : 'Mensaje:'}</p>
+            <textarea className='p-2 text-white col-sm-8 align-bottom overflow-auto' name='message' style={{ height: "100px" }} placeholder={language === 'en' ? 'Your message' : 'Tu mensaje'} required />
           </label>
           <button type='submit' className='btn btn-blackgreen d-block mx-auto mt-3' disabled={isSubmitting}>
-            {isSubmitting ? <FaSpinner className='spinner' /> : 'Enviar'}
+            {isSubmitting ? <FaSpinner className='spinner' /> : (language === 'en' ? 'Send' : 'Enviar')}
           </button>
           <input type='hidden' name='_next' value={window.location.href}></input>
           <input type='hidden' name='_captcha' value="false"></input>
         </form>
-        {formSubmitted && <div className='mt-3 alert alert-success' role='alert'>Sent successly!</div>}
+        {formSubmitted && <div className='mt-3 alert alert-success' role='alert'>{language === 'en' ? 'Sent successfully!' : '¡Enviado con éxito!'}</div>}
       </div>
     </div>
   );
