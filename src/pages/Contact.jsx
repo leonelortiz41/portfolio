@@ -31,7 +31,7 @@ function Contact({ language }) {
     setIsSubmitting(true); // Establecer el estado de envío a true
     const form = e.target;
     const formData = new FormData(form);
-    
+
     fetch("https://formsubmit.co/c.leonelortiz10@gmail.com", {
       method: "POST",
       body: formData,
@@ -74,7 +74,11 @@ function Contact({ language }) {
           <input type='hidden' name='_next' value={window.location.href}></input>
           <input type='hidden' name='_captcha' value="false"></input>
         </form>
-        {formSubmitted && <div className='mt-3 alert alert-success' role='alert'>{language === 'en' ? 'Sent successfully!' : '¡Enviado con éxito!'}</div>}
+        {formSubmitted && (
+          <div className="submission-success">
+            {language === 'en' ? 'Sent successfully!' : '¡Enviado con éxito!'}
+          </div>
+        )}
       </div>
     </div>
   );

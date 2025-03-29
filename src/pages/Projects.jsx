@@ -28,26 +28,18 @@ function Projects({ language }) {
     const projects = [
         {
             image: mitienda,
-            title: "My Store",
-            description: language === 'en' ? "An e-commerce platform." : "Una plataforma de comercio electrónico.",
             link: "https://tiendami.netlify.app",
         },
         {
             image: ligadefut,
-            title: "Football League",
-            description: language === 'en' ? "A football tournament organizer that manages fixtures and the league table." : "Un organizador de torneos de fútbol que gestiona los encuentros y la tabla de la liga.",
             link: "https://ligafutbol.vercel.app/",
         },
         {
             image: barlpdemo,
-            title: "Point of Sale (Demo)",
-            description: language === 'en' ? "A demo of a point of sale system currently used in a bar. Some features may not be available in this demo." : "Una demostración de un sistema de punto de venta actualmente utilizado en un bar. Algunas funciones pueden no estar disponibles en esta demo.",
             link: "https://barlp-demo.netlify.app",
         },
         {
             image: cirobarber,
-            title: "CIRO BARBER",
-            description: language === 'en' ? "A website for booking appointments at a barber shop." : "Un sitio web para reservar citas en una barbería.",
             link: "https://cirobarber.netlify.app/",
         }
     ];

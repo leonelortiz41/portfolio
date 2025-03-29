@@ -1,24 +1,27 @@
 import React from 'react';
+import { FaSun, FaMoon } from "react-icons/fa";
+import { IoLanguage } from "react-icons/io5";
 import { Link } from 'react-router-dom';
 
 function Header({ toggleTheme, theme, toggleLanguage, language }) {
   return (
-    <nav className="container-fluid p-3 body-header card-blur d-flex justify-content-between navbar navbar-expand-md navbar-light">
-      <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span className="navbar-toggler-icon"></span>
-      </button>
-      <div className="theme-switch-wrapper d-flex align-items-center">
-        <span className="theme-label ms-2">{theme === 'dark' ? 'Dark Mode' : 'Light Mode'}</span>
-        <label className="theme-switch" htmlFor="themeSwitch">
-          <input type="checkbox" id="themeSwitch" onChange={toggleTheme} checked={theme === 'dark'} />
-          <div className="slider round"></div>
-        </label>
+    <nav className={`container-fluid p-3 body-header card-blur d-flex justify-content-between align-items-center ${theme}`}>
+      {/* Botones de cambio de tema y idioma */}
+      <div className="d-flex align-items-center">
+        <button onClick={toggleTheme} className="btn theme-toggle me-3">
+          {theme === "dark" ? <FaMoon className="me-2" /> : <FaSun className="me-2" />}
+          {theme === "dark" ? "Dark Mode" : "Light Mode"}
+        </button>
+
+        <button onClick={toggleLanguage} className="btn language-toggle">
+          <IoLanguage className="me-2" />
+          {language === "en" ? "English" : "Español"}
+        </button>
       </div>
-      <button className='btn btn-lang' onClick={toggleLanguage}>
-        {language === 'en' ? 'English' : 'Español'}
-      </button>
-      <section className="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-        <ul className="nav nav-tabs d-flex justify-content-center my-auto card-header-tabs">
+
+      {/* Navegación */}
+      <section className="d-flex">
+      <ul className="nav nav-tabs d-flex justify-content-center my-auto card-header-tabs">
           <li className="nav-item">
             <a className='btn btn-nav' href="#">{language === 'en' ? 'Home' : 'Inicio'}</a>
           </li>

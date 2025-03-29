@@ -3,8 +3,8 @@
     --primary-color-light: #2b0a4f;
     --background-img-dark: url("../src/assets/bg-2.svg");
     --background-img-light: url("../src/assets/bg-3.svg");
-    --bg-blur-dark: rgba(0, 0, 0, 0.256);
-    --bg-blur-light: rgba(255, 255, 255, 0.256);
+    --bg-blur-dark: rgba(77, 83, 77, 0.256);
+    --bg-blur-light: rgba(230, 214, 253, 0.386);
     --text-color-dark: #fff;
     --text-color-light: #000;
     --text-color-light-op: #fff;
@@ -37,6 +37,7 @@ body {
     overflow-x: hidden;
     scroll-behavior: smooth;
     font-family: var(--font-family);
+    transition: all 0.5s;
 }
 
 
@@ -296,9 +297,7 @@ textarea:focus {
     }
 }
 
-.btn-nav:hover {
-    animation: animation-1 1.6s ease-out infinite;
-}
+
 
 html {
     scroll-behavior: smooth;
@@ -380,7 +379,7 @@ html {
     /* Altura de las flechas */
     width: 50px;
     /* Anchura de las flechas */
-    background-size: 70%;
+    background-size: 40%;
     /* Tamaño del ícono */
     background-position: center;
 }
@@ -455,3 +454,73 @@ input:checked+.slider {
 input:checked+.slider:before {
     transform: translateX(26px);
 }
+
+
+
+.body-header .btn {
+    display: flex;
+    align-items: center;
+    background: inherit;
+    color: inherit;
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, background 0.3s, color 0.3s;
+    margin-inline: 3px;
+}
+
+.body-header  .btn:hover {
+    transform: scale(1.1);
+}
+
+.theme-toggle {
+    background: var(--primary-color);
+    color: var(--text-color-op)
+
+}
+
+.language-toggle {
+    background: var(--primary-color);
+    color: var(--text-color-op)
+}
+
+.btn-nav {
+    background: transparent; /* Fondo transparente para los enlaces de navegación */
+    color: var(--primary-color); /* Cambia según tu diseño */
+    border: none; /* Sin borde */
+    padding: 0.5rem 1rem; /* Espaciado */
+    border-radius: 20px; /* Bordes redondeados */
+    transition: transform 0.3s, background 0.3s, color 0.3s;
+
+}
+
+.btn-nav:hover {
+    background: rgba(255, 255, 255, 0.2); /* Efecto hover */
+color: var(--text-color);
+}
+.submission-success {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 128, 0, 0.9); /* Fondo verde con opacidad */
+    color: white;
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+    opacity: 1; /* Comienza visible */
+    animation: fadeOut 2s forwards; /* Desvanecer gradualmente */
+  }
+  
+  /* Animación para desaparecer */
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      visibility: hidden; /* Ocultarlo completamente al finalizar */
+    }
+  }
