@@ -29,7 +29,7 @@
 }
 
 body {
-    background-image: var(--background-img);
+    background: linear-gradient(135deg, var(--text-color-op) 30% 40%, var(--primary-color));
     background-size: cover;
     background-repeat: repeat-y;
     user-select: none;
@@ -39,7 +39,16 @@ body {
     font-family: var(--font-family);
     transition: all 0.5s;
 }
-
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.24) 0%, rgba(0, 0, 0, 0.317) 100%);
+    z-index: -1;
+}
 
 
 .pointer {
@@ -524,3 +533,4 @@ color: var(--text-color);
       visibility: hidden; /* Ocultarlo completamente al finalizar */
     }
   }
+  
