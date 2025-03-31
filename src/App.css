@@ -39,6 +39,7 @@ body {
     font-family: var(--font-family);
     transition: all 0.5s;
 }
+
 body::before {
     content: '';
     position: fixed;
@@ -82,14 +83,6 @@ body::before {
     border: none;
 }
 
-.btn-blackgreen {
-    color: var(--primary-color);
-}
-
-.btn-blackgreen:hover {
-    filter: sepia(1);
-    transform: scale(1.2);
-}
 
 .subir {
     transition: all 1s;
@@ -103,15 +96,29 @@ body::before {
     top: 90%;
     right: 2%;
     z-index: 50;
-    animation: animation-subir 3s infinite ease-in;
+    animation: animation-subir 2.3s infinite cubic-bezier(0.39, 0.575, 0.565, 1);
 }
 
 .subir:active {
-    transition: .1s;
+    transition: all .2s;
     transform: scale(1.2);
     color: #fff;
 }
 
+@keyframes animation-subir {
+    0% {
+        transform: scale(0.7);
+    }
+
+    50% {
+        transform: scale(1);
+
+    }
+
+    100% {
+        transform: scale(0.7);
+    }
+}
 
 
 .body-contact a {
@@ -184,7 +191,10 @@ textarea:focus {
 }
 
 .body-contact button[type="submit"] {
-    color: var(--primary-color);
+    align-items: center;
+    padding: 0.4rem 1rem;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+    color: var(--text-color);
     font-size: 30px;
 }
 
@@ -478,14 +488,13 @@ input:checked+.slider:before {
     margin-inline: 3px;
 }
 
-.body-header  .btn:hover {
+.body-header .btn:hover {
     transform: scale(1.1);
 }
 
 .theme-toggle {
     background: var(--primary-color);
     color: var(--text-color-op)
-
 }
 
 .language-toggle {
@@ -494,43 +503,103 @@ input:checked+.slider:before {
 }
 
 .btn-nav {
-    background: transparent; /* Fondo transparente para los enlaces de navegación */
-    color: var(--primary-color); /* Cambia según tu diseño */
-    border: none; /* Sin borde */
-    padding: 0.5rem 1rem; /* Espaciado */
-    border-radius: 20px; /* Bordes redondeados */
+    background: transparent;
+    /* Fondo transparente para los enlaces de navegación */
+    color: var(--primary-color);
+    /* Cambia según tu diseño */
+    border: none;
+    /* Sin borde */
+    padding: 0.5rem 1rem;
+    /* Espaciado */
+    border-radius: 20px;
+    /* Bordes redondeados */
     transition: transform 0.3s, background 0.3s, color 0.3s;
 
 }
 
 .btn-nav:hover {
-    background: rgba(255, 255, 255, 0.2); /* Efecto hover */
-color: var(--text-color);
+    background: rgba(255, 255, 255, 0.2);
+    /* Efecto hover */
+    color: var(--text-color);
 }
+
 .submission-success {
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(0, 128, 0, 0.9); /* Fondo verde con opacidad */
+    background-color: rgba(0, 128, 0, 0.9);
+    /* Fondo verde con opacidad */
     color: white;
     padding: 1rem 2rem;
     font-size: 1.5rem;
     border-radius: 10px;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
     z-index: 9999;
-    opacity: 1; /* Comienza visible */
-    animation: fadeOut 2s forwards; /* Desvanecer gradualmente */
-  }
-  
-  /* Animación para desaparecer */
-  @keyframes fadeOut {
+    opacity: 1;
+    /* Comienza visible */
+    animation: fadeOut 2s forwards;
+    /* Desvanecer gradualmente */
+}
+
+/* Animación para desaparecer */
+@keyframes fadeOut {
     0% {
-      opacity: 1;
+        opacity: 1;
     }
+
     100% {
-      opacity: 0;
-      visibility: hidden; /* Ocultarlo completamente al finalizar */
+        opacity: 0;
+        visibility: hidden;
+        /* Ocultarlo completamente al finalizar */
     }
+}
+
+
+
+.btn-blackgreen:hover {
+    transform: scale(1.1);
+}
+.carousel {
+    overflow: hidden;
+}
+
+.carousel-item {
+    touch-action: pan-x; /* Mejora el desplazamiento horizontal táctil */
+}
+
+@media (width< 768px) {
+    .carousel-control-prev,
+    .carousel-control-next {
+        display: none; /* Oculta las flechas de navegación */
+    }
+}
+@media (width> 768px) {
+    .swipe-indicator{
+        display: none;
+    }
+}
+.uniform-card-size {
+    width: 100%; /* Ancho por defecto */
+    max-width: 400px; /* Máximo ancho para mantener un diseño limpio */
+    margin: auto; /* Centrar las tarjetas */
+}
+
+@media (max-width: 768px) {
+    .uniform-card-size {
+        width: 95%; /* Ancho del 95% en pantallas pequeñas */
+    }
+}
+.animated-arrow {
+    font-size: 20px;
+    animation: bounceArrow 2s infinite;
   }
   
+  @keyframes bounceArrow {
+    0%, 100% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(10px); /* Rebote hacia la derecha */
+    }
+  }

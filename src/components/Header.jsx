@@ -1,41 +1,54 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FaSun, FaMoon } from "react-icons/fa";
 import { IoLanguage } from "react-icons/io5";
-import { Link } from 'react-router-dom';
 
 function Header({ toggleTheme, theme, toggleLanguage, language }) {
-  return (
-    <nav className={`container-fluid p-3 body-header card-blur d-flex justify-content-between align-items-center ${theme}`}>
-      {/* Botones de cambio de tema y idioma */}
-      <div className="d-flex align-items-center">
-        <button onClick={toggleTheme} className="btn theme-toggle me-3">
-          {theme === "dark" ? <FaMoon className="me-2" /> : <FaSun className="me-2" />}
-          {theme === "dark" ? "Dark Mode" : "Light Mode"}
-        </button>
+  const [menuOpen, setMenuOpen] = useState(false);
 
-        <button onClick={toggleLanguage} className="btn language-toggle">
-          <IoLanguage className="me-2" />
-          {language === "en" ? "English" : "Español"}
+  const toggleMenu = () => setMenuOpen(!menuOpen);
+
+  return (
+    <nav className={`container-fluid p-3 body-header card-blur ${theme}`}>
+      <div className="d-flex justify-content-between align-items-center">
+
+        {/* Botón de menú para pantallas pequeñas */}
+        <button
+          className="btn btn-menu-toggle d-md-none"
+          onClick={toggleMenu}
+        >
+          {language === "en" ? "Menu" : "Menú"}
         </button>
       </div>
 
-      {/* Navegación */}
-      <section className="d-flex">
-      <ul className="nav nav-tabs d-flex justify-content-center my-auto card-header-tabs">
+      {/* Navegación y botones dentro del collapse */}
+      <div className={`collapse ${menuOpen ? "show" : ""} d-md-flex justify-content-md-between align-items-md-center`}>
+        <ul className="nav nav-tabs flex-column flex-md-row card-header-tabs mt-3 mt-md-0">
           <li className="nav-item">
-            <a className='btn btn-nav' href="#">{language === 'en' ? 'Home' : 'Inicio'}</a>
+            <a className="btn btn-nav" href="#">{language === 'en' ? 'Home' : 'Inicio'}</a>
           </li>
           <li className="nav-item">
-            <a className='btn btn-nav' href="#about">{language === 'en' ? 'About me' : 'Sobre mí'}</a>
+            <a className="btn btn-nav" href="#about">{language === 'en' ? 'About me' : 'Sobre mí'}</a>
           </li>
           <li className="nav-item">
-            <a className='btn btn-nav' href="#projects">{language === 'en' ? 'Projects' : 'Proyectos'}</a>
+            <a className="btn btn-nav" href="#projects">{language === 'en' ? 'Projects' : 'Proyectos'}</a>
           </li>
           <li className="nav-item">
-            <a className='btn btn-nav' href="#Contact">{language === 'en' ? 'Contact' : 'Contacto'}</a>
+            <a className="btn btn-nav" href="#Contact">{language === 'en' ? 'Contact' : 'Contacto'}</a>
           </li>
         </ul>
-      </section>
+
+        {/* Botones de idioma y tema */}
+        <div className="d-flex flex-column flex-md-row align-items-center mt-3 mt-md-0">
+          <button onClick={toggleTheme} className="btn theme-toggle me-md-3 mb-2 mb-md-0 d-flex align-items-center">
+            {theme === "dark" ? <FaMoon className="me-2" /> : <FaSun className="me-2" />}
+            {theme === "dark" ? "Dark Mode" : "Light Mode"}
+          </button>
+          <button onClick={toggleLanguage} className="btn language-toggle d-flex align-items-center">
+            <IoLanguage className="me-2" />
+            {language === "en" ? "English" : "Español"}
+          </button>
+        </div>
+      </div>
     </nav>
   );
 }

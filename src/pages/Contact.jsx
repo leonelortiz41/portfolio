@@ -2,6 +2,8 @@ import React, { useRef, useEffect, useState } from 'react';
 import { ImWhatsapp, ImLinkedin, ImGithub } from "react-icons/im";
 import { BsSendFill } from "react-icons/bs";
 import { FaSpinner } from 'react-icons/fa'; // Importar el icono de carga
+import "../App.css";
+
 
 function Contact({ language }) {
 
