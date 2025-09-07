@@ -11,7 +11,7 @@ import materialui from '../assets/materialui.png';
 import node from '../assets/node.png';
 import typescript from '../assets/typescript.png';
 import git from '../assets/git.png';
-import cv from '../assets/cv-OrtizCarlosLeonel.pdf';
+import cv from '../assets/Ortiz_Carlos_Leonel_CV.pdf';
 
 function About({ language }) {
     const refAbout = useRef(null);
